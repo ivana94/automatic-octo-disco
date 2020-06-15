@@ -1,41 +1,53 @@
 <template>
   <div class="container">
-    <div>
-      <logo />
+    <div v-if="!first">
       <h1 class="title">
-        betches-of-heide-park
+        Hey! 👋
       </h1>
-      <h2 class="subtitle">
-        My splendiferous Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
+      <h3>Tell me who you are:</h3>
+      <ul>
+        <li
+          v-for="user in users"
+          :key="user.id"
+          @click="handleClick(user.first)"
         >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+          {{ user.first }}
+        </li>
+      </ul>
+    </div>
+    <div v-if="first">
+      <h1 class="title">Hi {{ first }} 😊</h1>
+      <p v-if="user.has_paid">
+        You are debt-free. You've already paid {{ user.amount_owed }}. Thanks :)
+      </p>
+      <p v-else>
+        You are not debt-free. You still owe {{ user.amount_owed }}. No rush!
+      </p>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
+import axios from "axios";
 export default {
-  components: {
-    Logo
+  data: function() {
+    return {
+      first: "",
+      user: {},
+      users: []
+    };
+  },
+  mounted: async function() {
+    const { data } = await axios.get("/users");
+    this.users = data;
+  },
+  methods: {
+    handleClick: function(first) {
+      this.first = first;
+      this.user = this.users.filter(user => user.first === first)[0];
+    }
   }
-}
+};
 </script>
 
 <style>
@@ -54,8 +66,8 @@ export default {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;

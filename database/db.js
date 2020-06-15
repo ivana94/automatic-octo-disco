@@ -5,4 +5,4 @@ let db = spicedPg(
 );
 
 exports.getUserById = id => db.query("SELECT * FROM users WHERE id = $1", [id]);
-exports.getAllUserNames = id => db.query("SELECT first FROM users");
+exports.getAllUsers = id => db.query("SELECT * FROM users");

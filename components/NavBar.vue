@@ -1,21 +1,18 @@
 <template>
-  <div id="app">
-    <nav-bar />
-    <nuxt />
+  <div class="nav">
+    <nav>
+      <nuxt-link to="/">
+        Home
+      </nuxt-link>
+      <nuxt-link to="/trains">
+        Train Info
+      </nuxt-link>
+      <nuxt-link to="/heide-park">
+        Heide Park Info
+      </nuxt-link>
+    </nav>
   </div>
 </template>
-
-<script>
-import NavBar from "~/components/NavBar.vue";
-export default {
-  head() {
-    return {};
-  },
-  components: {
-    NavBar
-  }
-};
-</script>
 
 <style>
 html {

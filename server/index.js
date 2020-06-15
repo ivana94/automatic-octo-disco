@@ -5,6 +5,13 @@ const app = express();
 
 const db = require("../database/db");
 
+app.use(
+  require("cookie-session")({
+    secret: `betches love roller coasters`,
+    maxAge: 1000 * 60 * 60 * 24 * 7
+  })
+);
+
 // Import and Set Nuxt.js options
 const config = require("../nuxt.config.js");
 config.dev = process.env.NODE_ENV !== "production";
@@ -35,6 +42,6 @@ async function start() {
 start();
 
 app.get("/users", async (req, res) => {
-  const { rows } = await db.getAllUserNames();
-  console.log(rows);
+  const { rows } = await db.getAllUsers();
+  res.json(rows);
 });
