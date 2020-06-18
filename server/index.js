@@ -39,9 +39,10 @@ async function start() {
     badge: true
   });
 }
-start();
 
 app.get("/users", async (req, res) => {
   const { rows } = await db.getAllUsers();
   res.json(rows);
 });
+
+start();
