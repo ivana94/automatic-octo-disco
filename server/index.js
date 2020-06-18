@@ -32,6 +32,11 @@ async function start() {
   // Give nuxt middleware to express
   app.use(nuxt.render);
 
+  app.get("/users", async (req, res) => {
+    const { rows } = await db.getAllUsers();
+    res.json(rows);
+  });
+
   // Listen the server
   app.listen(process.env.PORT || port, host);
   consola.ready({
@@ -39,10 +44,5 @@ async function start() {
     badge: true
   });
 }
-
-app.get("/users", async (req, res) => {
-  const { rows } = await db.getAllUsers();
-  res.json(rows);
-});
 
 start();
