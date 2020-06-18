@@ -33,7 +33,7 @@
 <script>
 import axios from "axios";
 const instance = axios.create({
-  baseURL: "http://0.0.0.0:23799"
+  baseURL: "https://0.0.0.0:23799"
 });
 export default {
   data: function() {
