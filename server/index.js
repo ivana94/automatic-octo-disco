@@ -29,13 +29,13 @@ async function start() {
     await builder.build();
   }
 
-  // Give nuxt middleware to express
-  app.use(nuxt.render);
-
   app.get("/users", async (req, res) => {
     const { rows } = await db.getAllUsers();
     res.json(rows);
   });
+
+  // Give nuxt middleware to express
+  app.use(nuxt.render);
 
   // Listen the server
   app.listen(process.env.PORT || port, host);

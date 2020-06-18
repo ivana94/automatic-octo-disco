@@ -39,6 +39,10 @@ module.exports = {
    ** Nuxt.js modules
    */
   modules: ["@nuxtjs/axios"],
+  axios: {
+    baseURL: `http://localhost:${process.env.PORT || 3000}/`,
+    browserBaseURL: "/"
+  },
   /*
    ** Build configuration
    */
