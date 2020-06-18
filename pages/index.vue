@@ -32,6 +32,9 @@
 
 <script>
 import axios from "axios";
+const instance = axios.create({
+  baseURL: "http://0.0.0.0:23799"
+});
 export default {
   data: function() {
     return {
@@ -41,7 +44,7 @@ export default {
     };
   },
   mounted: async function() {
-    const { data } = await axios.get("/users");
+    const { data } = await instance.get("/users");
     this.users = data;
   },
   methods: {
