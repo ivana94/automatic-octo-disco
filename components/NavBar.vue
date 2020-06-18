@@ -2,10 +2,10 @@
   <div class="nav">
     <nav>
       <nuxt-link to="/">
-        Home
+        Home |
       </nuxt-link>
       <nuxt-link to="/trains">
-        Train Info
+        Train Info |
       </nuxt-link>
       <nuxt-link to="/heide-park">
         Heide Park Info
@@ -41,7 +41,17 @@ a {
   color: #39b982;
   font-weight: 600;
   background-color: transparent;
+  font-size: 28px;
 }
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: black;
+}
+
 img {
   border-style: none;
   width: 100%;
@@ -67,6 +77,7 @@ h2 {
 h3 {
   font-size: 28px;
   font-weight: 700;
+  margin: 10px 0;
 }
 h4 {
   font-size: 21px;

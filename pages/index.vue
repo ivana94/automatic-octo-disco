@@ -4,12 +4,13 @@
       <h1 class="title">
         Hey! 👋
       </h1>
-      <h3>Tell me who you are:</h3>
-      <ul>
+      <h3 class="subtitle">Tell me who you are:</h3>
+      <ul class="user-container">
         <li
           v-for="user in users"
           :key="user.id"
           @click="handleClick(user.first)"
+          class="user"
         >
           {{ user.first }}
         </li>
@@ -17,11 +18,13 @@
     </div>
     <div v-if="first">
       <h1 class="title">Hi {{ first }} 😊</h1>
-      <p v-if="user.has_paid">
-        You are debt-free. You've already paid {{ user.amount_owed }}. Thanks :)
-      </p>
-      <p v-else>
-        You are not debt-free. You still owe {{ user.amount_owed }}. No rush!
+      <h3>
+        See you tomorrow, 6:15am, Berlin Hbf Platform 4
+      </h3>
+      <h5 class="subtitle" v-if="!user.has_paid">amount owed:</h5>
+      <p v-if="!user.has_paid">
+        {{ user.amount_owed }}. Please send money by July 10th (this is when my
+        credit card bill is due!)
       </p>
     </div>
   </div>
@@ -62,7 +65,25 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+}
+
+.user-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: space-around;
+  height: 50vh;
+}
+
+.user {
+  width: 220px;
+  height: 80px;
+  margin: 5px 0;
+  border: 2px solid #39b982;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
@@ -73,6 +94,7 @@ export default {
   font-size: 100px;
   color: #35495e;
   letter-spacing: 1px;
+  border-bottom: 1px solid #526488;
 }
 
 .subtitle {
