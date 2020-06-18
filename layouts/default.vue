@@ -31,9 +31,10 @@ body {
 }
 #app {
   box-sizing: border-box;
-  width: 500px;
+  width: 100vw;
   padding: 0 20px 20px;
   margin: 0 auto;
+  /* border: 5px solid olive; */
 }
 hr {
   box-sizing: content-box;

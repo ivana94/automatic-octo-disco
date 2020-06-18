@@ -28,7 +28,7 @@ body {
 }
 #app {
   box-sizing: border-box;
-  width: 500px;
+  width: 100vw;
   padding: 0 20px 20px;
   margin: 0 auto;
 }
@@ -41,7 +41,7 @@ a {
   color: #39b982;
   font-weight: 600;
   background-color: transparent;
-  font-size: 28px;
+  font-size: 20px;
 }
 
 a:hover {

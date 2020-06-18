@@ -114,7 +114,7 @@ export default {
       {
         id: 11,
         first: "Woyti",
-        amount_owed: 39.18,
+        amount_owed: 75.18,
         has_paid: true,
         timestamp: "2020-06-15T15:38:28.432Z"
       },
@@ -166,7 +166,7 @@ export default {
 }
 
 .user {
-  width: 220px;
+  width: 150px;
   height: 80px;
   margin: 5px 0;
   border: 2px solid #39b982;
