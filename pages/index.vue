@@ -31,8 +31,6 @@
 </template>
 
 <script>
-import axios from "axios";
-
 export default {
   data: function() {
     return {
@@ -42,8 +40,99 @@ export default {
     };
   },
   mounted: async function() {
-    const { data } = await axios.get("/users");
-    this.users = data;
+    this.users = [
+      {
+        id: 1,
+        first: "Tom",
+        amount_owed: 60.98,
+        has_paid: false,
+        timestamp: "2020-06-15T15:38:28.421Z"
+      },
+      {
+        id: 2,
+        first: "K",
+        amount_owed: 23.88,
+        has_paid: true,
+        timestamp: "2020-06-15T15:38:28.423Z"
+      },
+      {
+        id: 3,
+        first: "Loretta",
+        amount_owed: 23.88,
+        has_paid: true,
+        timestamp: "2020-06-15T15:38:28.424Z"
+      },
+      {
+        id: 4,
+        first: "Matt",
+        amount_owed: 23.88,
+        has_paid: true,
+        timestamp: "2020-06-15T15:38:28.425Z"
+      },
+      {
+        id: 5,
+        first: "Andrea",
+        amount_owed: 23.88,
+        has_paid: true,
+        timestamp: "2020-06-15T15:38:28.426Z"
+      },
+      {
+        id: 6,
+        first: "Merle",
+        amount_owed: 23.88,
+        has_paid: true,
+        timestamp: "2020-06-15T15:38:28.427Z"
+      },
+      {
+        id: 7,
+        first: "Leo",
+        amount_owed: 60.98,
+        has_paid: false,
+        timestamp: "2020-06-15T15:38:28.428Z"
+      },
+      {
+        id: 8,
+        first: "Jake",
+        amount_owed: 60.98,
+        has_paid: true,
+        timestamp: "2020-06-15T15:38:28.429Z"
+      },
+      {
+        id: 9,
+        first: "Giordana",
+        amount_owed: 60.98,
+        has_paid: true,
+        timestamp: "2020-06-15T15:38:28.430Z"
+      },
+      {
+        id: 10,
+        first: "Maja",
+        amount_owed: 39.18,
+        has_paid: true,
+        timestamp: "2020-06-15T15:38:28.431Z"
+      },
+      {
+        id: 11,
+        first: "Woyti",
+        amount_owed: 39.18,
+        has_paid: true,
+        timestamp: "2020-06-15T15:38:28.432Z"
+      },
+      {
+        id: 12,
+        first: "Victoria",
+        amount_owed: 39.18,
+        has_paid: false,
+        timestamp: "2020-06-15T15:38:28.433Z"
+      },
+      {
+        id: 13,
+        first: "Ivana",
+        amount_owed: null,
+        has_paid: false,
+        timestamp: "2020-06-15T17:33:38.124Z"
+      }
+    ];
   },
   methods: {
     handleClick: function(first) {
