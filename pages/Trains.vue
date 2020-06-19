@@ -2,8 +2,10 @@
   <div>
     <h1 class="title">trains</h1>
     <h3>train confirmation numbers: KAFC30 and OVO4Z4</h3>
-    <h3 class="subtitle">journey to heide park</h3>
-    <h5>Berlin hbf -> Hannover Hbf -> Wolterdingen(Han)</h5>
+    <h3 class="subtitle subtitle-underline">journey to heide park</h3>
+    <h5>
+      Berlin hbf -> Hannover Hbf -> Wolterdingen(Han)
+    </h5>
     <ul>
       <li>
         <strong>6:35</strong>: ICE 644 / ICE 654 departs from Platform 4 (D - G)
@@ -27,8 +29,10 @@
       <li><strong>11:00</strong>: enter Heide Park</li>
     </ul>
 
-    <h3 class="subtitle">journey back to berlin</h3>
-    <h5>Wolterdingen(Han) -> Hannover Hbf -> Berlin hbf</h5>
+    <h3 class="subtitle subtitle-underline">journey back to berlin</h3>
+    <h5>
+      Wolterdingen(Han) -> Hannover Hbf -> Berlin hbf
+    </h5>
     <ul>
       <li><strong>19:00</strong>: Heide Park closes</li>
       <li>
@@ -53,7 +57,7 @@
         train also stops at Spandau and Gesundbrunnen
       </li>
     </ul>
-    <h3 class="subtitle">train reservation info</h3>
+    <h3 class="subtitle subtitle-underline">train reservation info</h3>
     <h5>seat reservations for ICE train to Hannover:</h5>
     <ul>
       <li>Group Ivana: Wagon 21, seats 101, 103, 105, 106, 107, 108</li>
@@ -83,5 +87,9 @@ export default {
 <style scoped>
 li {
   margin: 10px 0;
+}
+
+.subtitle-underline {
+  border-bottom: 1px solid black;
 }
 </style>

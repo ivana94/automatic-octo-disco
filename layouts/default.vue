@@ -32,6 +32,7 @@ body {
 #app {
   box-sizing: border-box;
   width: 100vw;
+  margin-top: 1vh;
   padding: 0 20px 20px;
   margin: 0 auto;
   /* border: 5px solid olive; */
@@ -42,7 +43,7 @@ hr {
   overflow: visible;
 }
 a {
-  color: #39b982;
+  color: #f2d398;
   font-weight: 600;
   background-color: transparent;
 }

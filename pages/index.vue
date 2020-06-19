@@ -151,7 +151,7 @@ export default {
 */
 .container {
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -169,7 +169,8 @@ export default {
   width: 150px;
   height: 80px;
   margin: 5px 0;
-  border: 2px solid #39b982;
+  border: 2px solid #acbed8;
+  background: #e8ebf7;
   border-radius: 3px;
   display: flex;
   justify-content: center;
@@ -181,16 +182,16 @@ export default {
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
+  font-size: 48px;
+  color: black;
   letter-spacing: 1px;
-  border-bottom: 1px solid #526488;
+  border-bottom: 1px solid black;
 }
 
 .subtitle {
   font-weight: 300;
-  font-size: 42px;
-  color: #526488;
+  font-size: 28px;
+  color: black;
   word-spacing: 5px;
   padding-bottom: 15px;
 }
